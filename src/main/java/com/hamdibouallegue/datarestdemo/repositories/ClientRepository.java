@@ -14,5 +14,5 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 */
 @RepositoryRestResource(path = "clients_objects",collectionResourceRel = "clients_path",excerptProjection = ClientDetailView.class)
 public interface ClientRepository extends JpaRepository<Client, Long> {
-    Client findByEmail(String email);
+    Client findByEmail(@Param("email")String email);
 }
